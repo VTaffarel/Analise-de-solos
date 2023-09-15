@@ -1,0 +1,115 @@
+/* Reset CSS básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos gerais */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Estilos do formulário */
+form {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+label {
+    width: 48%; /* Define a largura das labels */
+    margin-top: 15px;
+    font-weight: bold;
+    color: #555;
+    font-size: 20px;
+    text-align: left;
+}
+
+input[type="number"] {
+    width: 48%; /* Define a largura dos inputs */
+    padding: 15px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: border-color 0.3s ease;
+    display: inline-block; /* Faz com que os inputs fiquem lado a lado */
+}
+
+input[type="number"]:focus {
+    border-color: #00ff48;
+}
+
+button {
+    background-color:  #00ff48;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #006f37;
+}
+
+/* Estilos dos resultados */
+#resultados {
+    margin-top: 30px;
+    border-top: 2px solid #ccc;
+    padding-top: 30px;
+}
+
+h2 {
+    margin-top: 20px;
+    font-size: 28px;
+    color: #333;
+}
+
+p {
+    margin-bottom: 15px;
+    color: #555;
+    font-size: 20px;
+}
+
+span {
+    font-weight: bold;
+    color: #00ff48;
+    font-size: 22px;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    label,
+    input[type="number"] {
+        width: 100%; /* Em dispositivos menores, ocupam toda a largura */
+    }
+}

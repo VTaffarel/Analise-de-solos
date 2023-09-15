@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Análise de Solos</title>
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+    <div class="container">  
+
+    <h1>Calculadora de Análise de Solos</h1>
+
+    <form action="">
+        <label for="potassio">Potássio:</label>
+    <input type="number" id="potassio" placeholder="Potássio"><br>
+
+    <label for="calcio">Cálcio:</label>
+    <input type="number" id="calcio" placeholder="Cálcio"><br>
+
+    <label for="magnesio">Magnésio:</label>
+    <input type="number" id="magnesio" placeholder="Magnésio"><br>
+
+    <label for="hidrogenio">Hidrogênio:</label>
+    <input type="number" id="hidrogenio" placeholder="Hidrogênio"><br>
+
+    <label for="aluminio">Alumínio:</label>
+    <input type="number" id="aluminio" placeholder="Alumínio"><br>
+
+    <label for="ph">pH:</label>
+    <input type="number" id="ph" placeholder="pH"><br>
+
+    <button onclick="exibirValores()">Exibir Valores</button>
+
+    </form>
+    
+
+    <div id="resultados">
+        <h2>Valores Digitados:</h2>
+    <p>Soma das Bases: <span id="resultadoSB"></span></p>
+    <p>CTC efetiva: <span id="resultadot"></span></p>
+    <p>CTC Total: <span id="resultadoT"></span></p>
+    <p>Saturação de base (%): <span id="resultadoV">%</span></p>
+    <p>pH: <span id="resultadoPH"></span></p>
+    </div>
+    
+    </div>
+
+    <script>
+        function exibirValores() {
+            var potassio = document.getElementById("potassio").value;
+            var potassioCON = parseFloat(potassio);
+            var calcio = document.getElementById("calcio").value;
+            var calcioCON = parseFloat(calcio);
+            var magnesio = document.getElementById("magnesio").value;
+            var magnesioCON = parseFloat(magnesio);
+            var hidrogenio = document.getElementById("hidrogenio").value;
+            var hidrogenioCON = parseFloat(hidrogenio);
+            var aluminio = document.getElementById("aluminio").value;
+            var aluminioCON = parseFloat(aluminio);
+            var ph = document.getElementById("ph").value;
+            var phCON = parseFloat(ph);
+            var V = parseFloat(V);
+          
+            SB = potassioCON+calcioCON+magnesioCON; 
+            t = SB + aluminioCON;
+            Acidez_potencial = hidrogenioCON + aluminioCON;
+            T = SB + Acidez_potencial;
+            V = (100 * SB)/T;
+            
+            document.getElementById("resultadoSB").textContent = SB;
+            document.getElementById("resultadot").textContent = t;
+            document.getElementById("resultadoT").textContent = T;
+            document.getElementById("resultadoV").textContent = V;
+           // document.getElementById("resultadoAluminio").textContent = aluminio;
+            document.getElementById("resultadoPH").textContent = ph;
+           
+        }
+    </script>
+</body>
+</html>
